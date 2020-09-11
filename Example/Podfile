@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BWMonitor_Example' do
+  pod 'BWMonitor', :path => '../'
+
+  target 'BWMonitor_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
