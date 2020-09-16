@@ -16,18 +16,18 @@ open class BWFpsLabel: UILabel {
         displayLink?.invalidate()
     }
     open override func didMoveToSuperview() {
-        frame = CGRect(x: 15, y: 150, width: 40, height: 40)
-        layer.cornerRadius = 20
+        frame = CGRect(x: 15, y: 150, width: 60, height: 60)
+        layer.cornerRadius = 30
         clipsToBounds = true
         backgroundColor = UIColor.black
         textColor = UIColor.green
         textAlignment = .center
-        font = UIFont.systemFont(ofSize: 24)
+        font = UIFont.systemFont(ofSize: 20)
         run()
     }
     func run() {
         displayLink = CADisplayLink(target: self, selector: #selector(BWFpsLabel.tick(_:)))
-        displayLink?.add(to: .current, forMode: .commonModes)
+        displayLink?.add(to: .current, forMode: .common)
     }
     @objc func tick(_ displayLink: CADisplayLink) {
         if lastTime == 0 {
@@ -45,7 +45,7 @@ open class BWFpsLabel: UILabel {
         let fps: Double = Double(count) / timeDelta
         count = 0
         DispatchQueue.main.async {
-            self.text = String(format: "%.0f", fps)
+            self.text = String(format: "%.1f", fps)
             self.textColor = fps > 50 ? UIColor.green : UIColor.red
         }
         

@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     }
     @IBAction func clickOntheSlowRun(_ sender: Any) {
         
-        for i in 0...100 {
-            Thread.sleep(forTimeInterval: 0.01)
+        for i in 0...1001 {
+            sleep(UInt32(1))
             print(i)
         }
 //        NSLog("开始阻塞主线程 \(Date().timeIntervalSince1970)")
