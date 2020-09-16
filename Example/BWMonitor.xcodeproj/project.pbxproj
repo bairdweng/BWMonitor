@@ -15,6 +15,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		DA073AF72511E89200A1C962 /* OCExample.m in Sources */ = {isa = PBXBuildFile; fileRef = DA073AF62511E89200A1C962 /* OCExample.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +44,13 @@
 		82EE1F4030A8E387D10A6E58 /* Pods-BWMonitor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWMonitor_Tests.release.xcconfig"; path = "Target Support Files/Pods-BWMonitor_Tests/Pods-BWMonitor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		847998677F6EF5F7AB0EF2B6 /* Pods_BWMonitor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BWMonitor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED677ED67AF34D42FB79193 /* Pods-BWMonitor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BWMonitor_Example.debug.xcconfig"; path = "Target Support Files/Pods-BWMonitor_Example/Pods-BWMonitor_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C76FF6060DD9A0D3FF9F8B04 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C76FF6060DD9A0D3FF9F8B04 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D64C2752DDA99D59591381A2 /* Pods_BWMonitor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BWMonitor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F156801E3F95337164820925 /* BWMonitor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BWMonitor.podspec; path = ../BWMonitor.podspec; sourceTree = "<group>"; };
-		F802EC2793A3C75F085A2AE8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		DA073AF42511E89100A1C962 /* BWMonitor_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BWMonitor_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA073AF52511E89200A1C962 /* OCExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCExample.h; sourceTree = "<group>"; };
+		DA073AF62511E89200A1C962 /* OCExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCExample.m; sourceTree = "<group>"; };
+		F156801E3F95337164820925 /* BWMonitor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BWMonitor.podspec; path = ../BWMonitor.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F802EC2793A3C75F085A2AE8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,6 @@
 				3EA68696131F6124169731B0 /* Pods-BWMonitor_Tests.debug.xcconfig */,
 				82EE1F4030A8E387D10A6E58 /* Pods-BWMonitor_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -120,6 +123,9 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				DA073AF52511E89200A1C962 /* OCExample.h */,
+				DA073AF62511E89200A1C962 /* OCExample.m */,
+				DA073AF42511E89100A1C962 /* BWMonitor_Example-Bridging-Header.h */,
 			);
 			name = "Example for BWMonitor";
 			path = BWMonitor;
@@ -213,7 +219,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1150;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -227,6 +233,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -331,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA073AF72511E89200A1C962 /* OCExample.m in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -478,11 +486,14 @@
 			baseConfigurationReference = 9ED677ED67AF34D42FB79193 /* Pods-BWMonitor_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BWMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BWMonitor/BWMonitor_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -493,11 +504,13 @@
 			baseConfigurationReference = 09F00CF93F4A5B169BF3BB77 /* Pods-BWMonitor_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BWMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BWMonitor/BWMonitor_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
